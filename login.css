@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.dv-login{
+    width: 336px;
+    height: 236px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+}
+.head-clr{
+    background-color: #FFDC40;
+    height: 28px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 13px;
+    z-index: -1;
+}
+.dv-login h2{
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.dv-login .mr-detail{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 11px;
+    cursor: pointer;
+}
+.dv-login .input-nm{
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 286px;
+    margin-left: 28px;
 }
