@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+  list-style-type: none;
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -14,7 +16,7 @@
 }
 .add-form {
   width: 333px;
-  height: 244px;
+  max-height: 397px;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   display: flex;
@@ -32,16 +34,22 @@ h2 {
   margin-bottom: 16px;
   margin-top: 13px;
 }
+.mr-detail-dv {
+  width: 274px;
+  display: flex;
+  justify-content: flex-end;
+}
 .mr-detail {
   border: none;
   background-color: white;
   cursor: pointer;
-  
+  display: flex;
+  justify-content: flex-end;
 }
 .inp-data {
   border: 1px solid #c4c4c4;
   width: 286px;
-  height: 40px;
+  max-height: 200px;
   border-radius: 10px;
   margin-top: 11px;
 }
@@ -51,8 +59,9 @@ h2 {
   height: 30px;
   outline-style: none;
   border: none;
+  font-size: 14px;
 }
-.inp-data button{
+.cls {
   float: right;
   margin-right: 20px;
   margin-top: 10px;
@@ -62,7 +71,7 @@ h2 {
   background: url(./img-icon/close-btn.svg);
   width: 20px;
 }
-.inp-data button:hover{
+.cls:hover {
   background: url(./img-icon/close-btn-hov.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -82,6 +91,7 @@ h2 {
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-bottom: 19px;
 }
 .add-data button {
   width: 42px;
@@ -96,7 +106,29 @@ h2 {
   font-size: 14px;
   margin-left: 11px;
 }
-.add-data:hover{
+.add-data:hover {
   opacity: 0.8;
   transition: 0.4s ease;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 5px;
+  display: none;
+}
+.list p{
+  font-size: 14px;
+}
+.remove-btn{
+  background: url(./img-icon/close-btn.svg);
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-right: 10px;
+}
+.remove-btn:hover{
+  background: url(./img-icon/close-btn-hov.svg);
+  width: 20px;
+  height: 20px;
+  transition: 0.5s;
 }
