@@ -34,12 +34,15 @@ h2 {
   margin-bottom: 16px;
   margin-top: 13px;
 }
-.mr-detail-dv {
+.sort-dv {
   width: 274px;
   display: flex;
   justify-content: flex-end;
 }
-.mr-detail {
+.sorting {
+  background: url(./img-icon/sort.svg);
+  width: 25px;
+  height: 15px;
   border: none;
   background-color: white;
   cursor: pointer;
@@ -70,11 +73,10 @@ h2 {
   height: 20px;
   background: url(./img-icon/close-btn.svg);
   width: 20px;
-}
-.cls:hover {
-  background: url(./img-icon/close-btn-hov.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+.cls:hover {
   height: 21px;
   width: 21px;
   border: none;
@@ -116,21 +118,34 @@ h2 {
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   margin-top: 10px;
+  max-height: 170px;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 .list p{
   font-size: 14px;
 }
-.todolist{
+
+.showli{
   display: flex;
+  font-size: 14px;
+  text-align: center;
   justify-content: space-between;
   width: 270px;
   margin-bottom: 10px;
-}
-.showli{
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  text-align: center;
 }
 .remove-btn{
   background: url(./img-icon/close-btn.svg);
@@ -138,12 +153,16 @@ h2 {
   height: 20px;
   border: none;
   margin-right: 14px;
+  cursor: pointer;
 }
 .remove-btn:hover{
   background: url(./img-icon/close-btn-hov.svg);
   width: 20px;
   height: 20px;
-  transition: 0.5s;
+  transition: 0.3s;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 14px;
 }
 /* .none{
   display: none;
