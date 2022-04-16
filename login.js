@@ -15,7 +15,7 @@ input.addEventListener("keyup", (e) => {
       clsform.style.display = "block";
       inpdata.style.border = "1px solid #C4C4C4";
     } else {
-      const addli = document.createElement("li");
+      const addli = document.createElement("p");
       addli.classList.add("showli");
       addli.innerHTML = input.value;
       const deletebtn = document.createElement("button");
@@ -27,7 +27,8 @@ input.addEventListener("keyup", (e) => {
       showlist.style.display = "flex";
       clsform.style.display = "none";
       inpdata.style.border = "none";
-      addli.setAttribute('draggable' ,true)
+      addli.setAttribute("draggable", true);
+      // addli.classList.add('draggable')
     }
   }
   var liremove = document.querySelectorAll(".remove-btn");
@@ -47,70 +48,74 @@ btn.addEventListener("click", () => {
   clsform.style.display = "block";
   inpdata.style.border = "1px solid #C4C4C4";
 });
-remove.addEventListener('mouseover', () => {
-  remove.style.background = `url(./img-icon/close-btn-hov.svg)`
-  remove.style.backgroundRepeat = 'no-repeat'
-  remove.style.backgroundPosition = 'center'
-})
-remove.addEventListener('mouseleave', () => {
-  remove.style.background = `url(./img-icon/close-btn.svg)`
-})
+remove.addEventListener("mouseover", () => {
+  remove.style.background = `url(./img-icon/close-btn-hov.svg)`;
+  remove.style.backgroundRepeat = "no-repeat";
+  remove.style.backgroundPosition = "center";
+});
+remove.addEventListener("mouseleave", () => {
+  remove.style.background = `url(./img-icon/close-btn.svg)`;
+});
 remove.addEventListener("click", () => {
   input.value = "";
 });
 
+let isTrue = true;
+sortButton.onclick = function () {
+  if (isTrue) {
+    isTrue = false;
+    sortButton.style.background = "url(./img-icon/sorted.svg)";
+    sortButton.style.width = "25px";
+    sortButton.style.height = "15px";
+    sortButton.style.border = "none";
+    sortButton.onmouseover = function () {
+      sortButton.style.background = `url(./img-icon/sorted.svg)`;
+      sortButton.style.transition = "0.3s";
+    };
+    sortButton.onmouseout = function () {
+      sortButton.style.background = `url(./img-icon/sort.svg)`;
+      sortButton.style.transition = "0.3s";
+    };
+  } 
+  else {
+    isTrue = true;
+    sortButton.style.background = "url(./img-icon/reverse-sorted.svg)";
+    sortButton.style.width = "25px";
+    sortButton.style.height = "15px";
+    sortButton.style.border = "none";
+    sortButton.onmouseover = function () {
+      sortButton.style.background = `url(./img-icon/reverse-sorted.svg)`;
+      sortButton.style.transition = "0.3s";
+    };
+    sortButton.onmouseout = function () {
+      sortButton.style.background = `url(./img-icon/reverse-sort.svg)`;
+      sortButton.style.transition = "0.3s";
+    };
+  }
 
-
-
-let isTrue = true
-sortButton.onclick = function(){
-    if(isTrue){
-      isTrue = false
-      sortButton.style.background = 'url(./img-icon/sorted.svg)'
-      sortButton.style.width = '25px'
-      sortButton.style.height = '15px'
-      sortButton.style.border = 'none' 
-      sortButton.onmouseover = function(){
-        sortButton.style.background = `url(./img-icon/sorted.svg)`
-        sortButton.style.transition = '0.3s'
-      }
-      sortButton.onmouseout = function(){
-        sortButton.style.background = `url(./img-icon/sort.svg)`
-        sortButton.style.transition = '0.3s'
-      }
-    }
-    else{
-      isTrue = true
-      sortButton.style.background = 'url(./img-icon/reverse-sorted.svg)'
-      sortButton.style.width = '25px'
-      sortButton.style.height = '15px'
-      sortButton.style.border = 'none'
-      sortButton.onmouseover = function(){
-        sortButton.style.background = `url(./img-icon/reverse-sorted.svg)`
-        sortButton.style.transition = '0.3s'
-      }
-      sortButton.onmouseout = function(){
-        sortButton.style.background = `url(./img-icon/reverse-sort.svg)`
-        sortButton.style.transition = '0.3s'
-      }
-    }
-
-  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  var list,
+    i,
+    switching,
+    b,
+    shouldSwitch,
+    dir,
+    switchcount = 0;
   switching = true;
-  dir = "asc"; 
+  dir = "asc";
   while (switching) {
     switching = false;
-    b = showlist.getElementsByTagName("LI");
-    for (i = 0; i < (b.length - 1); i++) {
+    b = showlist.getElementsByTagName("P");
+    for (i = 0; i < b.length - 1; i++) {
       shouldSwitch = false;
       if (dir == "asc") {
         if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
           shouldSwitch = true;
           break;
         }
-      } else if (dir == "desc") {
+      } 
+      else if (dir == "desc") {
         if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
-          shouldSwitch= true;
+          shouldSwitch = true;
           break;
         }
       }
@@ -118,15 +123,27 @@ sortButton.onclick = function(){
     if (shouldSwitch) {
       b[i].parentNode.insertBefore(b[i + 1], b[i]);
       switching = true;
-      switchcount ++;
-    } else {
+      switchcount++;
+    } 
+    else {
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
       }
     }
   }
-}
+};
 
+// ------------------- Drag and Drop ---------------------
 
+const draggables = document.querySelector(".showli");
+
+  draggables.addEventListener("dragstart", () => {
+    // draggable.classList.add('dragging')
+    console.log("test");
+  });
+
+  // draggable.addEventListener('dragend', () => {
+  //   draggable.classList.remove('dragging')
+  // })
 

@@ -164,6 +164,6 @@ h2 {
   background-repeat: no-repeat;
   margin-right: 14px;
 }
-/* .none{
-  display: none;
-} */
+.dragging {
+  color: red;
+}
