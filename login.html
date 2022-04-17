@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Rashad Guluzadeh" />
+    <link rel="shortcut icon" href="./img-icon/list-solid.svg" />
+    <title>To-Do List</title>
     <link rel="stylesheet" href="./login.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/2.1.0/angular-drag-and-drop-lists.min.js"
+      integrity="sha512-tqWQpa8YEeq6z/Fr/LvkUrH5rk0VhlKtYlyD5hKVQWdvQrhMS15OHvu2oR/b8HR/BwwCxD+1VKT/74wF/M39rg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -13,9 +21,9 @@
         <div class="ylw-span"></div>
         <h2>To-Do List</h2>
         <div class="sort-dv">
-          <button class="sorting" ></button>
+          <button class="sorting"></button>
         </div>
-        <div class="list" style="flex-direction:column;"></div>
+        <div class="list" style="flex-direction: column"></div>
         <div class="inp-data">
           <div id="cls-form">
             <input type="text" name="" id="inp-element" maxlength="30" />

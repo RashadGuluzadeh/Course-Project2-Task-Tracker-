@@ -49,6 +49,12 @@ h2 {
   display: flex;
   justify-content: flex-end;
 }
+.sorting:hover{
+  background: url(./img-icon/sorted.svg);
+  width: 25px;
+  height: 15px;
+  transition: .3s;
+}
 .inp-data {
   border: 1px solid #c4c4c4;
   width: 286px;
@@ -120,6 +126,8 @@ h2 {
   margin-top: 10px;
   max-height: 170px;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 286px;
 }
 ::-webkit-scrollbar {
   width: 14px;
@@ -146,6 +154,8 @@ h2 {
   justify-content: space-between;
   width: 270px;
   margin-bottom: 10px;
+  cursor: move;
+  user-select: none;
 }
 .remove-btn{
   background: url(./img-icon/close-btn.svg);
@@ -164,6 +174,7 @@ h2 {
   background-repeat: no-repeat;
   margin-right: 14px;
 }
-.dragging {
-  color: red;
+
+.over{
+  border: 3px dotted #666;
 }
