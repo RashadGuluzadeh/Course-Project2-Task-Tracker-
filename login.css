@@ -63,17 +63,20 @@ h2 {
   margin-top: 11px;
 }
 .inp-data input {
-  margin: 5px 0 5px 5px;
+  margin: 0 0 5px 5px;
   width: 222px;
-  height: 30px;
+  height: 20px;
   outline-style: none;
   border: none;
   font-size: 14px;
 }
+#cls-form{
+  height: 30px;
+  margin-top: 10px;
+}
 .cls {
   float: right;
-  margin-right: 20px;
-  margin-top: 10px;
+  margin-right: 23px;
   border: none;
   cursor: pointer;
   height: 20px;
@@ -121,12 +124,10 @@ h2 {
 .list{
   padding:10px 5px 0 5px;
   display: none;
-  border: 1px solid #c4c4c4;
   border-radius: 10px;
-  margin-top: 10px;
   max-height: 170px;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 286px;
 }
 .wrapper{
@@ -156,7 +157,7 @@ h2 {
   text-align: center;
   justify-content: space-between;
   width: 270px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   cursor: move;
   user-select: none;
 }
