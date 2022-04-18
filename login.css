@@ -129,6 +129,9 @@ h2 {
   overflow-x: hidden; */
   width: 286px;
 }
+.wrapper{
+  display: none;
+}
 ::-webkit-scrollbar {
   width: 14px;
 }
