@@ -62,8 +62,8 @@ remove.addEventListener("mouseover", () => {
   remove.style.background = `url(./img-icon/close-btn-hov.svg)`;
   remove.style.backgroundRepeat = "no-repeat";
   remove.style.backgroundPosition = "center";
-  remove.style.width = '1.5vw'
-  remove.style.height = '1.5vw'
+  remove.style.width = '20px'
+  remove.style.height = '20px'
   remove.style.backgroundSize = 'cover'
 });
 
@@ -71,8 +71,8 @@ remove.addEventListener("mouseleave", () => {
   remove.style.background = `url(./img-icon/close-btn.svg)`;
   remove.style.backgroundRepeat = "no-repeat";
   remove.style.backgroundPosition = "center";
-  remove.style.width = '1.5vw'
-  remove.style.height = '1.5vw'
+  remove.style.width = '20px'
+  remove.style.height = '20px'
   remove.style.backgroundSize = 'cover'
 });
 
