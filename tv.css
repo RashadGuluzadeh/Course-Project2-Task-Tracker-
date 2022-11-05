@@ -1,0 +1,174 @@
+@media (min-width: 1326px){
+    .add-form {
+      width: 25vw;
+      min-height: 17vw;
+      border: 1px solid #c4c4c4;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ylw-span {
+      background-color: #ffdc40;
+      border-radius: 9px 9px 0 0;
+      width: 100%;
+      height: 2vw;
+    }
+    h2 {
+      font-size: 2vw;
+      text-align: center;
+      margin-bottom: 16px;
+      margin-top: 13px;
+    }
+    .sort-dv {
+      width: 20vw;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .sorting {
+      background: url(./img-icon/sort.svg);
+      width: 1.8vw;
+      height: 1.12vw;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      background-size: cover;
+    }
+    .sorting:hover{
+      background: url(./img-icon/sorted.svg);
+      width: 1.8vw;
+      height: 1.12vw;
+      transition: .3s;
+    }
+    .inp-data {
+      border: 1px solid #c4c4c4;
+      width: 21vw;
+      max-height: 12vw;
+      border-radius: 10px;
+      margin-top: 0.8vw;
+      /* max-height: 170px; */
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .inp-data input {
+      margin: 0 0 5px 5px;
+      width: 16vw;
+      height: 1.5vw;
+      outline-style: none;
+      border: none;
+      font-size: 1vw;
+    }
+    #cls-form{
+      height: 2vw;
+      margin-top: 10px;
+      width: 21vw;
+    }
+    .cls {
+      float: right;
+      margin-right: 24px;
+      border: none;
+      cursor: pointer;
+      height: 1.5vw;
+      background: url(./img-icon/close-btn.svg);
+      width: 1.5vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .cls:hover {
+      height: 1.5vw;
+      width: 1.5vw;
+      border: none;
+      transition: 0.3s;
+    }
+    .add-data {
+      margin-top: 1.3vw;
+      width: 11vw;
+      height: 3.1vw;
+      background-color: #833ae0;
+      border: none;
+      border-radius: 1.5vw;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-bottom: 19px;
+    }
+    .add-data button {
+      width: 3.1vw;
+      height: 3.1vw;
+      border-radius: 50%;
+      background-color: #9953f1;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1vw;
+    }
+    .add-data p {
+      font-size: 1vw;
+      margin-left: 11px;
+    }
+    .add-data:hover {
+      opacity: 0.8;
+      transition: 0.4s ease;
+    }
+    .list{
+      padding:10px 5px 0 5px;
+      display: none;
+      border-radius: 10px;
+      width: 21vw;
+    }
+    .wrapper{
+      display: none;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+      border-radius: 100px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+      border-radius: 100px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    .list p{
+      font-size: 14px;
+    }
+  
+    .showli{
+      display: flex;
+      font-size: 1vw;
+      text-align: center;
+      justify-content: space-between;
+      width: 20vw;
+      margin-bottom: 0.5vw;
+      cursor: move;
+      user-select: none;
+    }
+    .remove-btn{
+      background: url(./img-icon/close-btn.svg);
+      width: 1.5vw;
+      height: 1.5vw;
+      border: none;
+      margin-right: 14px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .remove-btn:hover{
+      background: url(./img-icon/close-btn-hov.svg);
+      width: 20px;
+      height: 20px;
+      transition: 0.3s;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 14px;
+    }
+  }
